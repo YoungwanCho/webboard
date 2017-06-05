@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <% include ../partials/head %>
+  </head>
+  <body>
+  <% include ../partials/nav %>
+
+  <div class="board board-show">
+    <div class="board-menu">
+      <a href="/boards">Back</a>
+      <a href="/boards/<%= board._id %>/edit">Edit</a>
+      <form action="/boards/<%= board._id %>?_method=delete" method="post">
+        <a href="#" onclick="confirm('Do you want to delete this?')?this.parentElement.submit():null;">Delete</a>
+      </form>
+      <div>
+      <h2>Show</h2>
+      <h3><%= board.title%></h3>
+      <div>
+        <label>작성자</label><span><%= board.name %></span>
+      </div>
+      <!-- <div>
+        <label>제목</label><span><%= board.title %></span>
+      </div> -->
+      <div>
+        <label>내용</label><span><%= board.content %></span>
+      </div>
+    </div>
+  </body>
+</html>

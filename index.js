@@ -23,6 +23,7 @@ app.use(methodOverride("_method"));
 
 app.use("/", require("./routes/home"));
 app.use("/contacts", require("./routes/contacts"));
+app.use("/boards", require("./routes/boards"));
 
 app.listen(3000, function(){
   console.log("server on!");

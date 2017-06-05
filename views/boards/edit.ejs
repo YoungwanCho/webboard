@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+ <head>
+  <% include ../partials/head %>
+ </head>
+ <body>
+  <% include ../partials/nav %>
+
+  <div class="board board-edit">
+   <div class="board-menu">
+    <a href="/boards/<%= board._id %>">Back</a>
+   </div>
+   <h2>글 수정 하기</h2>
+   <form class="board-form" action="/boards/<%= board._id %>?_method=put" method="post">
+    <div>
+     <label for="name">작성자</label>
+     <input type="text" id="name" name="name" value="<%= board.name %>">
+    </div>
+    <!-- <div>
+     <label for="title">제목</label>
+     <input type="text" id="title" name="title" value="<%= board.title %>">
+    </div> -->
+    <div>
+     <label for="content">내용</label>
+     <textarea id="content" name="content"><%= board.content %></textarea>
+    </div>
+    <div>
+     <button type="submit">Submit</button>
+    </div>
+   </div>
+  </form>
+ </body>
+</html>

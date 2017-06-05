@@ -9,3 +9,15 @@
 .contact .contact-menu form{
   display: inline-block;
 }
+
+.board h2{
+  color: blue;
+}
+.board .board-form label,
+.board-show label{
+  display: inline-block;
+  width: 50px;
+}
+.board .board-menu form{
+  display: inline-block;
+}

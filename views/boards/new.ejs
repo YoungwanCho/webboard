@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <% include ../partials/head %>
+  </head>
+  <body>
+    <% include ../partials/nav %>
+
+    <div class="board board-new">
+      <div class="board-menu">
+        <a href="/boards">Back</a>
+      </div>
+      <h2>게시물을 작성해주세요</h2>
+      <form class="board-form" action="/boards" method="post">
+        <div>
+          <label for="name">작성자</label>
+          <input type="text" id="name" name="name" value="">
+        </div>
+        <div>
+          <label for="title">제목</label>
+          <input type="text" id="title" name="title" value="">
+        </div>
+        <div>
+          <label for="content">내용</label>
+          <textarea row="50" cols="100" id="content" name="content" value="">내용을 입력하세요</textarea>
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

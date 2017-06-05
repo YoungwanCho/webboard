@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <% include ../partials/head %>
+  </head>
+  <body>
+    <% include ../partials/nav %>
+
+    <% include ../partials/board %>
+
+    <div class="board board-index">
+     <h2>게시판</h2>
+     <ul>
+      <% boards.forEach(function(board) { %>
+       <li>
+        <a href="/boards/<%= board._id %>"><%= board.title %></a>
+       </li>
+      <% }) %>
+     </ul>
+    </div>
+  </body>
+</html>
